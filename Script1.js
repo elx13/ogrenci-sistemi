@@ -15,29 +15,29 @@ function ogrenciEkle() {
     var ogretmenAd = document.getElementById("ogretmenAd").value;
     var ogretmenSoyad = document.getElementById("ogretmenSoyad").value;
     if (!ogrenciNo || !tcNo || !ogrenciAd || !ogrenciSoyad || !ogrenciSinif ) {
-            alert("Raporlama için *öðrenci bilgileri* kýsmýný doldurmak zorunludur!.");
+            alert("Raporlama iÃ§in *Ã¶ÄŸrenci bilgileri* kÄ±smÄ±nÄ± doldurmak zorunludur!.");
             return;
         }
-    do {
-        ogrenciNo = prompt("Lütfen 6 basamaklý bir sayý giriniz:");
-        } while (ogrenciNo.length !== 6 || isNaN(ogrenciNo));
-
+    if (ogrenciNo.length !== 6 && isNaN(ogrenciNo) {
+        alert("LÃ¼tfen 6 basamaklÄ± bir sayÄ± giriniz");
+        return;
+        } 
+    
     var raporBilgileri = document.getElementById("raporBilgileri");
-
     var raporListesi = document.createElement("div"); 
 
     // Bilgileri listeye ekle 
-    raporListesi.innerHTML = "<strong>Öðrenci Bilgileri:</strong><br>" +
-        "Öðrenci Numarasý: " + ogrenciNo + "<br>" +
-        "TC Numarasý: " + tcNo + "<br>" +
+    raporListesi.innerHTML = "<strong>Ã–Ã°renci Bilgileri:</strong><br>" +
+        "Ã–Ã°renci NumarasÄ±: " + ogrenciNo + "<br>" +
+        "TC NumarasÃ½: " + tcNo + "<br>" +
         "Ad: " + ogrenciAd + "<br>" +
         "Soyad: " + ogrenciSoyad + "<br>" +
-        "Sýnýf: " + ogrenciSinif + "<br>" +
-        "Sorumlu öðretmen: " + ogretmenAd + ogretmenSoyad + "<br>" +
+        "SÄ±nÄ±f: " + ogrenciSinif + "<br>" +
+        "Sorumlu Ã¶ÄŸretmen: " + ogretmenAd + ogretmenSoyad + "<br>" +
         "Veli Ad & Soyad: " + veliAd + veliSoyad + "<br>";
     raporBilgileri.appendChild(raporListesi);
 
-    // Formu sýfýrla
+    // Formu sÄ±fÄ±rla
     document.getElementById("ogrenciForm").reset();
     //document.getElementById("ogrenciEklemeFormu").style.display = "none";
     document.getElementById("rapor").style.display = "block";   
