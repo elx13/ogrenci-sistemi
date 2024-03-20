@@ -15,7 +15,7 @@ function ogrenciEkle() {
     var ogretmenAd = document.getElementById("ogretmenAd").value;
     var ogretmenSoyad = document.getElementById("ogretmenSoyad").value;
     
-    if (!ogrenciNo || !tcNo || !ogrenciAd || !ogrenciSoyad || !ogrenciSinif ) {
+    if (!ogrenciNo || !tcNo || !ogrenciAd || !ogrenciSoyad || !ogrenciSinif )) {
             alert("Raporlama için *öğrenci bilgileri* kısmını doldurmak zorunludur!.");
             return;
         }
