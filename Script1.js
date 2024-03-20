@@ -19,7 +19,7 @@ function ogrenciEkle() {
             alert("Raporlama için *öğrenci bilgileri* kısmını doldurmak zorunludur!.");
             return;
         }
-    if (ogrenciNo.length !== 6 && isNaN(ogrenciNo)) {
+    if (ogrenciNo.length !== 6 || isNaN(ogrenciNo)) {
         alert("Lütfen 6 basamaklı bir sayı giriniz");
         return;
         } 
@@ -28,9 +28,9 @@ function ogrenciEkle() {
     var raporListesi = document.createElement("div"); 
 
     // Bilgileri listeye ekle 
-    raporListesi.innerHTML = "<strong>Öðrenci Bilgileri:</strong><br>" +
-        "Öðrenci Numarası: " + ogrenciNo + "<br>" +
-        "TC Numarasý: " + tcNo + "<br>" +
+    raporListesi.innerHTML = "<strong>Öğrenci Bilgileri:</strong><br>" +
+        "Öğrenci Numarası: " + ogrenciNo + "<br>" +
+        "TC Numarası: " + tcNo + "<br>" +
         "Ad: " + ogrenciAd + "<br>" +
         "Soyad: " + ogrenciSoyad + "<br>" +
         "Sınıf: " + ogrenciSinif + "<br>" +
