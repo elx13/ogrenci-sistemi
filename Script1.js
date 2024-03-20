@@ -15,11 +15,11 @@ function ogrenciEkle() {
     var ogretmenAd = document.getElementById("ogretmenAd").value;
     var ogretmenSoyad = document.getElementById("ogretmenSoyad").value;
     
-    if (!ogrenciNo || !tcNo || !ogrenciAd || !ogrenciSoyad || !ogrenciSinif )) {
+    if (!ogrenciNo || !tcNo || !ogrenciAd || !ogrenciSoyad || !ogrenciSinif ) {
             alert("Raporlama için *öğrenci bilgileri* kısmını doldurmak zorunludur!.");
             return;
         }
-    if (ogrenciNo.length !== 6 && isNaN(ogrenciNo) {
+    if (ogrenciNo.length !== 6 && isNaN(ogrenciNo)) {
         alert("Lütfen 6 basamaklı bir sayı giriniz");
         return;
         } 
