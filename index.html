@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <title>Öğrenci Sistemi</title>
+</head>
+<body>
+
+    <div class="container">
+        <div id="girisEkrani">
+            <h1>Öğrenci Sistemi'ne Hoşgeldiniz!</h1>
+            <button onclick="girisEkraniGoster()">Öğrenci Ekle</button>
+        </div>
+
+        <div id="ogrenciEklemeFormu" style="display: none;">
+            <h1>Öğrenci Ekle</h1>
+
+            <form id="ogrenciForm">
+                <div class="ogrenci-bilgileri">
+                    <h2>Öğrenci Bilgileri</h2>
+
+                    <label for="ogrenciNo">Öğrenci Numarası:</label>
+                    <input type="text" id="ogrenciNo" required pattern="\d{6}" title="6 basamaklı sayı giriniz">
+
+                    <label for="tcNo"> TC Numarası:</label>
+                    <input type="text" id="tcNo" required pattern="\d+" title="Sadece rakam giriniz">
+
+                    <label for="ogrenciAd"> Adı:</label>
+                    <input type="text" id="ogrenciAd" required>
+
+                    <label for="ogrenciSoyad">Soyadı:</label>
+                    <input type="text" id="ogrenciSoyad" required>
+
+                    <label for="ogrenciSinif">Öğrenci Sınıfı:</label>
+                    <input type="number" id="ogrenciSinif" min="1" max="4" required>
+                </div>
+
+                <div class="ogretmen-bilgileri">
+                    <h2>Öğretmen Bilgileri</h2>
+
+                    <label for="ogretmenAd">Adı:</label>
+                    <input type="text" id="ogretmenAd" required>
+
+                    <label for="ogretmenSoyad">Soyadı:</label>
+                    <input type="text" id="ogretmenSoyad" required>
+
+                    <label for="ogretmenTelefon">Telefon Numarası:</label>
+                    <input type="tel" id="ogretmenTelefon" required pattern="\d{10}" title="Geçerli bir telefon numarası giriniz">
+                </div>
+
+                <div class="veli-bilgileri">
+                    <h2>Veli Bilgileri</h2>
+
+                    <label for="veliAd">Adı:</label>
+                    <input type="text" id="veliAd" required>
+                    <label for="veliSoyad">Soyadı:</label>
+                    <input type="text" id="veliSoyad" required>
+
+                    <label for="veliTelefon">Telefon Numarası:</label>
+                    <input type="tel" id="veliTelefon" required pattern="\d{10}" title="Geçerli bir telefon numarası giriniz">
+                </div>
+
+                <button onclick="ogrenciEkle()">Kaydet</button>
+            </form>
+        </div>
+        <div id="rapor" style="display: none;">
+            <h1>Rapor Bilgileri</h1>
+            <ul id="raporBilgileri"></ul>
+        </div>
+        <script src="Script1.js"></script>
+    </div>
+
+</body>
+</html>
